@@ -33,7 +33,8 @@
 
 .cache
 .vscode
-antlr4-runtime
+antlr4_runtime
 build
-spreadsheet/antlr4-runtime
+spreadsheet/antlr4_runtime
 .clangd
+*.drawio*

@@ -42,11 +42,18 @@ public:
         Div0,  // в результате вычисления возникло деление на ноль
     };
 
-    FormulaError(Category category);
+    FormulaError(Category category) 
+        : category_(category) {
 
-    Category GetCategory() const;
+    }
 
-    bool operator==(FormulaError rhs) const;
+    Category GetCategory() const {
+        return category_;
+    }
+
+    bool operator==(FormulaError rhs) const {
+        return category_ == rhs.category_;
+    }
 
     std::string_view ToString() const;
 
